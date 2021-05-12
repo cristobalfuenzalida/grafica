@@ -119,6 +119,9 @@ if __name__ == "__main__":
     # Connecting the callback functions
     glfw.set_key_callback(window, on_key)
     glfw.set_cursor_pos_callback(window, cursor_pos_callback)
+
+    VAO = glGenVertexArrays(1)
+    glBindVertexArray(VAO)
     
     # Creating our shader program and telling OpenGL to use it
     pipeline = es.SimpleShaderProgram()
